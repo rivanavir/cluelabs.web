@@ -24,6 +24,8 @@ $main_green: #a3cc06;
 // rules
 body{
   background: #f0f0f0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 // main wrapper
@@ -527,12 +529,35 @@ footer.main-footer{
 // parallax styles
 .bulb-wrap{
   .bulb{
-    &.bulb1{
-      z-index: 3;
-      position: fixed;
-      left: 24%;
-      top: 90px;
-      width: 310px;
+    z-index: 3;
+    position: absolute;
+    >img{
+      width: 100%;
+    }
+    &.white{
+      &.bulb1{
+        left: 24%;
+        top: 90px;
+        width: 310px;
+      }
+      &.bulb2{
+        left: 5.8%;
+        top: 575px;
+        width: 375px;
+        opacity: 0.9;
+      }
+      &.bulb3{
+        left: 65%;
+        top: 315px;
+        width: 730px;
+        opacity: 0.5;
+      }
+      &.bulb4{
+        left: 75%;
+        top: 1200px;
+        width: 375px;
+        opacity: 0.9;
+      }
     }
   }
 }
