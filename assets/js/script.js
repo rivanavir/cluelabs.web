@@ -6,6 +6,8 @@ $(document).ready(function(){
     } else{
       $(this).parent('.form-group').removeClass('notEmpty')
     }
-  })
+  });
+
+  $(window).enllax();
 
 });

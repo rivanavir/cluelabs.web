@@ -22,17 +22,18 @@ $main_green: #a3cc06;
 }
 
 // rules
+html { overflow-x: hidden; }
 body{
   background: #f0f0f0;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 // main wrapper
 .main-wrapper{
   position: relative;
   z-index: 10;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     min-height: 100vh;
     padding-bottom: 90px;
     margin-bottom: -90px;
@@ -65,6 +66,7 @@ header.main-header{
     }
     ul.navbar-nav{
       align-items: center;
+      background: #fff;
       @media(max-width:991px){
         align-items: flex-start;
         border:1px solid rgba(0,0,0,.1);
@@ -280,12 +282,19 @@ form.custom-form{
   .challenge-block-wrapper{
     padding: 80px 30px;
     text-align: center;
+    @media(max-width: 991px){
+      padding: 60px 15px;
+    }
     h3{
       font-size: 51px;
       font-family: 'Roboto';
       font-weight: 300;
       color: $light_blue;
       margin-bottom: 40px;
+      @media(max-width:767px){
+        font-size: 35px;
+        margin-bottom: 25px;
+      }
     }
   }
   
@@ -298,6 +307,10 @@ form.custom-form{
       font-weight: 500;
       color: #2f2f2f;
       margin-bottom: 50px;
+      @media(max-width:767px){
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
     }
   }
 }
@@ -306,16 +319,23 @@ form.custom-form{
 .challenge-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  @media(min-width:768px){
+    justify-content: space-between;
+  }
   .challenge-block{
     border-radius: 2px;
     background: #fff;
-    width: 30%;
+    width: 80%;
     margin: 25px 0;
     position: relative;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
     transition: all .3s ease-in-out;
+    @media(min-width:768px){
+      width: 48%;
+    }
     @media(min-width:992px){
+      width: 30%;
       &:hover{
         box-shadow: 0 0 30px rgba(0,0,0,.3);
         .block-ttl{
@@ -390,6 +410,9 @@ form.custom-form{
   .carousel-block{
     width: 980px;
     margin: 0 auto;
+    @media(max-width:1000px){
+      width: 100%;
+    }
     .carousel{
       ol.carousel-indicators{
         bottom: 20%;
@@ -490,6 +513,8 @@ form.custom-form{
 footer.main-footer{
   background: #2f2f2f;
   padding: 30px 0 20px;
+  position: relative;
+  z-index: 30;
   .foot-logo{
     margin-bottom: 6px;
     display: block;
@@ -537,26 +562,74 @@ footer.main-footer{
     &.white{
       &.bulb1{
         left: 24%;
-        top: 90px;
+        top: 90px; // 90
         width: 310px;
       }
       &.bulb2{
         left: 5.8%;
-        top: 575px;
+        top: 875px; // 575
         width: 375px;
         opacity: 0.9;
       }
       &.bulb3{
         left: 65%;
-        top: 315px;
+        top: 615px; // 315
         width: 730px;
         opacity: 0.5;
       }
       &.bulb4{
         left: 75%;
-        top: 1200px;
+        top: 1600px; // 1200
         width: 375px;
         opacity: 0.9;
+      }
+      &.bulb5{
+        left: -25%;
+        top: 1700px; // 1300
+        width: 730px;
+        opacity: 0.5;
+      }
+      &.bulb6{
+        left: 8%;
+        top: 2600px; // 2400
+        width: 730px;
+        opacity: 0.6;
+      }
+    }
+    &.colorful{
+      z-index: 5;
+      // display: none;
+      &.bulb7{
+        left: -7%;
+        top: 315px;
+      }
+      &.bulb8{
+        left: 88%;
+        top: 610px;
+      }
+      &.bulb9{
+        left: 4.4%;
+        top: 1225px;
+      }
+      &.bulb10{
+        left: 8%;
+        top: 1735px;
+      }
+      &.bulb11{
+        left: 82%;
+        top: 2140px;
+      }
+      &.bulb12{
+        left: 12.5%;
+        top: 2280px;
+      }
+      &.bulb13{
+        left: 79%;
+        top: 2750px;
+      }
+      &.bulb14{
+        left: 7%;
+        top: 2850px;
       }
     }
   }
